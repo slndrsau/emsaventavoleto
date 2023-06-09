@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="399.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ventatickets.controllers.EventsController.Dates">
+   <children>
+      <Button fx:id="regresar" layoutX="46.0" layoutY="63.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" style="-fx-background-color: #38D3D8;" styleClass="button-danger" text="Regresar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <VBox layoutX="46.0" layoutY="100.0" prefHeight="211.0" prefWidth="318.0">
+         <children>
+            <Label text="Id Fecha" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idfecha" editable="false" />
+            <Label text="Fecha para la Funcion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="fecha" editable="false" maxWidth="1.7976931348623157E308" />
+            <Label text="Hora para la Funcion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hora" />
+            <Label text="Pertenece a la Funcion" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="evento" editable="false" />
+            <Label text="Activo" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="activo" maxWidth="1.7976931348623157E308" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Label layoutX="89.0" layoutY="26.0" text="Modificar Fecha de la Funcion" textFill="WHITE">
+         <font>
+            <Font name="Elephant Italic" size="14.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" layoutX="46.0" layoutY="319.0" prefHeight="47.0" prefWidth="318.0">
+         <children>
+            <Button fx:id="guardar" mnemonicParsing="false" style="-fx-background-color: #38D3D8;" styleClass="button-primary" text="Guardar Fecha" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
