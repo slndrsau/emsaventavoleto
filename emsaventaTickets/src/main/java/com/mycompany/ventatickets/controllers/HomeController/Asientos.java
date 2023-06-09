@@ -43,23 +43,16 @@ import javafx.util.Duration;
  */
 public class Asientos implements Initializable {
     
-    /**
-    * Constructor por defecto de la clase Asientos.
-    * Crea una instancia de Asientos sin parámetros.
-    */
+    
    public Asientos() {
-       // Código del constructor
+       
    }
     
-    /**
-     * Initializes the controller class.
-     */    
+     
     @FXML
     public GridPane initialGrid;
     
-    /**
-     * Etiqueta que muestra la vista de los asientos.
-    */
+    
     @FXML
     public Label viewAsientos;
     
@@ -262,7 +255,7 @@ public class Asientos implements Initializable {
          Params<Integer> param = Location.getParams();
          StringBuilder asientos = new StringBuilder();
          if (seleccionados.contains(asiento)) {
-            // Eliminar el elemento            
+                        
             Button targetButton = (Button) container.lookup("#"+asiento);
             com.mycompany.ventatickets.models.Asientos filtro = todosList.stream().filter(x -> x.getId() == Integer.valueOf(asiento.split("\\|")[1])).toList().get(0);
             targetButton.setBackground(this.colorAsiento(filtro.getIdSection()));
@@ -290,7 +283,7 @@ public class Asientos implements Initializable {
         int columnas = 2;
         String[][] matriz = new String[filas][columnas];
 
-        // Asignar los valores a la matriz
+        
         for (int i = 0; i < filas; i++) {
             String[] dato = seleccionados.get(i).split("\\|");
             matriz[i][0] = dato[0];
@@ -358,7 +351,7 @@ public class Asientos implements Initializable {
                 timeline.stop();
                 Params<Events> param = new Params<>();
                 param.setDato(Context.getEvent());
-                 // Aquí puedes agregar la lógica que deseas ejecutar después de que el temporizador llegue a cero.
+                 
                 App.view("EventDetail", param);               
             }
         });

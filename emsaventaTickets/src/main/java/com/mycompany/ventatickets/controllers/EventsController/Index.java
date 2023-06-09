@@ -95,9 +95,8 @@ public class Index implements Initializable {
                 if (empty) {
                     setText(null);
                 } else {
-                    // Obtener el objeto Usuario de la fila actual
+                    
                     Events evento = getTableView().getItems().get(getIndex());
-                    // Llamar al método de tu modelo con el parámetro deseado
                     String texto = evento.getInitialDate("dd/MM/yyy");
                     setText(texto);
                 }
@@ -111,9 +110,7 @@ public class Index implements Initializable {
                 {
                     modificar.getStyleClass().add("button-success");
                     modificar.setOnAction(event -> {
-                        // Lógica para manejar el evento del botón
                         Events evento = getTableRow().getItem();
-                        // Realizar acciones con el usuario seleccionado
                         Params<Events> parametro = new Params();
                         parametro.setDato(evento);
                         App.view("Edit",parametro);
@@ -134,10 +131,7 @@ public class Index implements Initializable {
         acciones.setStyle("-fx-alignment: CENTER;");       
     }    
     
-    /**
-     * metodo para cambiar a la vista create
-     * 
-     */
+    
     public void irACreate(){
         App.view("Create");
     }

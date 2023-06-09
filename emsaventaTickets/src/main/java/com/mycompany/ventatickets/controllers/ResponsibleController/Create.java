@@ -29,27 +29,19 @@ import javafx.util.StringConverter;
  */
 public class Create implements Initializable {
     
-    /**
-     *Boton para crear responsables
-     */
+    
     @FXML
     public Button crear;
 
-    /**
-     *input que recibe el nombre del responsable
-     */
+    
     @FXML
     public TextField nombre;
     
-    /**
-     *boton para regresar a la lista
-     */
+    
     @FXML
     public Button regresar;
 
-    /**
-     *Combo box para asignar tipo de responsable
-     */
+    
     @FXML
     public ComboBox<TipoResponsable> tipos;
     
@@ -93,7 +85,6 @@ public class Create implements Initializable {
 
             @Override
             public TipoResponsable fromString(String string) {
-                // No se necesita implementación para la conversión inversa
                 return null;
             }
         });

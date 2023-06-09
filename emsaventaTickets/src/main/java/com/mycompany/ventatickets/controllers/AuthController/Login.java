@@ -27,10 +27,7 @@ import com.mycompany.ventatickets.models.User;
  */
 public class Login implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
-    
+   
     @FXML
     public TextField txtUserSignIn, txtPasswordSignInMask;
     

@@ -54,9 +54,7 @@ public class Create implements Initializable {
     
     private DUser _usuarios = new DUser();
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         regresar.setOnMouseClicked(event -> {
@@ -96,7 +94,6 @@ public class Create implements Initializable {
 
             @Override
             public TipoResponsable fromString(String string) {
-                // No se necesita implementación para la conversión inversa
                 return null;
             }
         });
@@ -133,7 +130,6 @@ public class Create implements Initializable {
 
             @Override
             public TipoResponsable fromString(String string) {
-                // No se necesita implementación para la conversión inversa
                 return null;
             }
         });

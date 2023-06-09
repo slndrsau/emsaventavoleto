@@ -42,87 +42,59 @@ import javafx.util.StringConverter;
  */
 public class Create implements Initializable {
     
-    /**
-     * boton para cargar la imagen
-     */
+    
     @FXML
     public Button uploadImage;
     
-    /**
-     * boton para regresar a la tabla
-     */
+    
     @FXML
     public Button regresar;
 
-    /**
-     * boton para guardar evento
-     */
+    
     @FXML
     public Button save;
 
-    /**
-     * input tipo Imagen para la visualizar imagen
-     */
+    
     @FXML
     public ImageView imageView; 
 
-    /**
-     * input tipo texto para el nombre
-     */
+    
     @FXML
     public TextField nombre;
 
-    /**
-     * input tipo text area para la synopsis
-     */
+    
     @FXML
     public TextArea synopsis;
 
-    /**
-     * input tipo fecha para la fecha inicio
-     */
+    
     @FXML
     public DatePicker fechaInicio;
 
-    /**
-     * input tipo texto para la hora inicio
-     */
+    
     @FXML
     public TextField horaInicio;
 
-    /**
-     * input tipo fecha para la fecha final
-     */
+    
     @FXML
     public DatePicker fechaFin;
 
-    /**
-     * input texto para la hora fin
-     */
+    
     @FXML
     public TextField horaFin;
 
-    /**
-     *input Fecha para la fecha visible
-     */
+    
     @FXML
     public DatePicker fechaVisible;
 
-    /**
-     *input texto para la hora visible
-     */
+    
     @FXML
     public TextField horaVisible;
 
-    /**
-     * input texto para la fecha oculto
-     */
+    
     @FXML
     public DatePicker fechaOculto;
 
-    /**
-     * input texto para la hora oculto
-     */
+    
     @FXML
     public TextField horaOculto;
     
@@ -192,7 +164,7 @@ public class Create implements Initializable {
 
             @Override
             public Responsible fromString(String string) {
-                // No se necesita implementación para la conversión inversa
+                
                 return null;
             }
         });
@@ -205,19 +177,19 @@ public class Create implements Initializable {
              FileChooser fileChooser = new FileChooser();
              fileChooser.setTitle("Buscar Imagen");
 
-            // Agregar filtros para facilitar la busqueda
+            
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("All Images", "*.*"),
                     new FileChooser.ExtensionFilter("JPG", "*.jpg"),
                     new FileChooser.ExtensionFilter("PNG", "*.png")
             );
 
-            // Obtener la imagen seleccionada
+            
             File imgFile = fileChooser.showOpenDialog(null);
             
-            // Mostar la imagen
+            
             if (imgFile != null) {
-                //guardamos la ruta de la imagen en una variable
+                
                 rutaImagen = imgFile.getAbsolutePath();
 
                 Image image = new Image("file:" + imgFile.getAbsolutePath());

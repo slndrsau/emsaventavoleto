@@ -46,9 +46,7 @@ public class Dashboard implements Initializable {
     public ImageView users;
 
 
-    /**
-     * Initializes the controller class.
-     */
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         if (Context.isIsLogIn()) {

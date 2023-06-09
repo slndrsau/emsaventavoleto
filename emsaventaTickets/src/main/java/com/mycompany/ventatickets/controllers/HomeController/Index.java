@@ -73,7 +73,6 @@ public class Index implements Initializable {
         vbox.setPadding(new Insets(10));
         vbox.setSpacing(10);
 
-        // Establecer el ancho de cada columna al 50% de la pantalla
         vbox.setStyle("-fx-column-count: 2; -fx-column-gap: 10px; -fx-pref-width: 50%; -fx-margin-top: 200px;");
 
         if (Context.isIsLogIn()) {
@@ -91,11 +90,8 @@ public class Index implements Initializable {
         btnc.setText(Context.isIsLogIn() ? "Cerrar Sesión" : "Iniciar Sesión");
 
         for (Events event : eventList) {
-            // Crear una tarjeta para cada usuario
-            // Crear una tarjeta para cada usuario
             VBox card = createCard(event);
 
-            // Agregar la tarjeta al VBox
             vbox.getChildren().add(card);
         }
         
@@ -108,14 +104,12 @@ public class Index implements Initializable {
     } 
     
     private VBox createCard(Events event) {
-        // Crear la tarjeta del evento
         VBox card = new VBox();
         card.setSpacing(10);       
         card.setPadding(new Insets(10));
         card.setBackground(new Background(new BackgroundFill(Color.BLACK, new CornerRadii(10), null)));
         card.setStyle("-fx-border-color: #3D373D; -fx-border-width: 1px; -fx-border-radius: 10px;");
 
-        // Agregar los elementos de la tarjeta: nombre y foto (suponiendo que tienes propiedades 'name' y 'photo' en la clase User)
         Label nameLabel = new Label(event.getName());
         nameLabel.setFont(Font.font("System", FontWeight.BOLD, 18));
         nameLabel.setTextFill(Color.WHITE);
@@ -136,12 +130,10 @@ public class Index implements Initializable {
         
         container.getChildren().addAll(photoImageView,descriptionText);  
         
-         // Crear la etiqueta de fecha
         Text dateLabel = new Text("Fecha: " + event.getInitialDate(UniversalDateTimeFormat.getDdMMyyy()));
         dateLabel.setFont(Font.font("System", FontWeight.BOLD, 14));
         dateLabel.setFill(Color.WHITE);
 
-        // Crear la etiqueta de hora
         Text timeLabel = new Text("Hora: " + event.getInitialDate("HH:mm:ss a"));
         timeLabel.setFont(Font.font("System", FontWeight.BOLD, 14));
         timeLabel.setFill(Color.WHITE);
@@ -161,7 +153,6 @@ public class Index implements Initializable {
         });
         VBox.setMargin(seeDetal, new Insets(10));
 
-        // Agregar los elementos al HBox de la tarjeta
         card.setAlignment(Pos.CENTER);
         card.getChildren().addAll(nameLabel,container, fechas, seeDetal);
 

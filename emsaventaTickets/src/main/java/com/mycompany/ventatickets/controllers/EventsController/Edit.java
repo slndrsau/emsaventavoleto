@@ -115,7 +115,7 @@ public class Edit implements Initializable {
     @FXML
     public TextField durationEvent;
     
-    //campos que utilizan las fechas del evento
+   
     
     @FXML
     public TableView<DatesEvent> tablafechas;
@@ -227,7 +227,7 @@ public class Edit implements Initializable {
 
             @Override
             public Responsible fromString(String string) {
-                // No se necesita implementación para la conversión inversa
+               
                 return null;
             }
         });            
@@ -356,19 +356,19 @@ public class Edit implements Initializable {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Buscar Imagen");
 
-       // Agregar filtros para facilitar la busqueda
+       
        fileChooser.getExtensionFilters().addAll(
                new FileChooser.ExtensionFilter("All Images", "*.*"),
                new FileChooser.ExtensionFilter("JPG", "*.jpg"),
                new FileChooser.ExtensionFilter("PNG", "*.png")
        );
 
-       // Obtener la imagen seleccionada
+       
        File imgFile = fileChooser.showOpenDialog(null);
 
-       // Mostar la imagen
+       
        if (imgFile != null) {
-           //guardamos la ruta de la imagen en una variable
+           
            rutaImagen = imgFile.getAbsolutePath();
 
            Image image = new Image("file:" + imgFile.getAbsolutePath());
@@ -391,9 +391,9 @@ public class Edit implements Initializable {
                 if (empty) {
                     setText(null);
                 } else {
-                    // Obtener el objeto Usuario de la fila actual
+                    
                     DatesEvent evento = getTableView().getItems().get(getIndex());
-                    // Llamar al método de tu modelo con el parámetro deseado
+                    
                     String texto = evento.getFecha_evento(UniversalDateTimeFormat.getDdMMyyy_HHmmss());
                     setText(texto);
                 }
@@ -408,9 +408,9 @@ public class Edit implements Initializable {
                 {
                     modificar.getStyleClass().add("button-success");
                     modificar.setOnAction(event -> {
-                        // Lógica para manejar el evento del botón
+                        
                         DatesEvent evento = getTableRow().getItem();
-                        // Realizar acciones con el usuario seleccionado
+                        
                         Params<DatesEvent> parametro = new Params();
                         parametro.setDato(evento);
                         App.view("Dates",400,400,parametro);

@@ -48,9 +48,7 @@ public class Edit implements Initializable {
     
     private final DResponsible _responsible = new DResponsible();
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Params<Responsible> param = Location.getParams();
@@ -87,7 +85,6 @@ public class Edit implements Initializable {
 
             @Override
             public TipoResponsable fromString(String string) {
-                // No se necesita implementación para la conversión inversa
                 return null;
             }
         });

@@ -85,9 +85,7 @@ public class Index implements Initializable {
                     if (empty) {
                         setText(null);
                     } else {
-                        // Obtener el objeto Usuario de la fila actual
                         Asientos asiento = getTableView().getItems().get(getIndex());
-                        // Llamar al método de tu modelo con el parámetro deseado
                         String texto = asiento.getSection().getDescription();
                         setText(texto);
                     }
@@ -100,9 +98,7 @@ public class Index implements Initializable {
                 {
                     modificar.getStyleClass().add("toggle-button");
                     modificar.setOnAction(event -> {
-                        // Lógica para manejar el evento del botón
                         Asientos asiento = getTableRow().getItem();
-                        // Realizar acciones con el usuario seleccionado
                         boolean ac = !asiento.isActive();
                         asiento.setActive(ac);
                         _asientos.ModifyAsiento(asiento);

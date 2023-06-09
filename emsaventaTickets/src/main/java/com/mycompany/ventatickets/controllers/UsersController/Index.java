@@ -100,9 +100,7 @@ public class Index implements Initializable {
                     if (empty) {
                         setText(null);
                     } else {
-                        // Obtener el objeto Usuario de la fila actual
                         User evento = getTableView().getItems().get(getIndex());
-                        // Llamar al método de tu modelo con el parámetro deseado
                         String texto = evento.getIdRol() == 1 ? "Administrador" : "Cliente";
                         setText(texto);
                     }
@@ -117,9 +115,7 @@ public class Index implements Initializable {
                     {
                         modificar.getStyleClass().add("button-success");
                         modificar.setOnAction((ActionEvent event) -> {
-                            // Lógica para manejar el evento del botón
                             User evento = getTableRow().getItem();
-                            // Realizar acciones con el usuario seleccionado
                             Params<User> parametro = new Params();
                             parametro.setDato(evento);
                             App.view("Edit",parametro);

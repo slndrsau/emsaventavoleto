@@ -74,9 +74,7 @@ public class Index implements Initializable {
                      if (empty) {
                         setText(null);
                     } else {
-                        // Obtener el objeto responsable de la fila actual
                         Responsible responsable = getTableView().getItems().get(getIndex());
-                        // Llamar al método de tu modelo con el parámetro deseado
                         String texto = responsable.getType() == 1 ? "Persona" : "Empresa";
                         setText(texto);
                     }
@@ -91,9 +89,7 @@ public class Index implements Initializable {
                 {
                     modificar.getStyleClass().add("button-success");
                     modificar.setOnAction(event -> {
-                        // Lógica para manejar el evento del botón
                         Responsible responsible = getTableRow().getItem();
-                        // Realizar acciones con el usuario seleccionado
                         Params<Responsible> parametro = new Params();
                         parametro.setDato(responsible);
                         App.view("Edit",parametro);
