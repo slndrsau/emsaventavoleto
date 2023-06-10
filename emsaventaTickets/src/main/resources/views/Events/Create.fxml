@@ -63,7 +63,7 @@
                <children>
                   <ImageView fx:id="imageView" fitHeight="284.0" fitWidth="296.0" pickOnBounds="true" VBox.vgrow="ALWAYS">
                      <image>
-                        <Image url="@../../images/SIN_IMAGEN.jpg" />
+                        <Image url="@../../images/no-fotos.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="uploadImage" mnemonicParsing="false" prefHeight="94.0" prefWidth="101.0" style="-fx-background-color: #38D3D8;" styleClass="button-primary" text="Cargar Imagen">

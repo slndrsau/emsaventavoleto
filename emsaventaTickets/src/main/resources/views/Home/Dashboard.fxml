@@ -62,7 +62,7 @@
             </Label>
             <ImageView fx:id="events" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Eventos.jpeg" />
+                  <Image url="@../../images/Eventos.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -70,7 +70,7 @@
             </ImageView>
             <ImageView fx:id="users" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Usuarios.jpeg" />
+                  <Image url="@../../images/Usuarios.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -78,7 +78,7 @@
             </ImageView>
             <ImageView fx:id="responsibles" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Usuarios.jpeg" />
+                  <Image url="@../../images/Responsables.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -86,7 +86,7 @@
             </ImageView>
             <ImageView fx:id="seating" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Asientos.jpeg" />
+                  <Image url="@../../images/Asientos.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -94,7 +94,7 @@
             </ImageView>
             <ImageView fx:id="tickets" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Tickets.jpeg" />
+                  <Image url="@../../images/entradas.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -102,7 +102,7 @@
             </ImageView>
             <ImageView fx:id="menu" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <image>
-                  <Image url="@../../images/Menu.jpeg" />
+                  <Image url="@../../images/Menu.png" />
                </image>
                <GridPane.margin>
                   <Insets top="15.0" />
@@ -115,7 +115,7 @@
             <Insets bottom="30.0" />
          </GridPane.margin>
          <image>
-            <Image url="@../../images/Dasboard_tickets.jpg" />
+            <Image url="@../../images/dashboard.png" />
          </image>
       </ImageView>
       <Label text="Bienvenido Nuevamente" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="TOP">

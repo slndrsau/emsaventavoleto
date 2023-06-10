@@ -18,11 +18,7 @@ public class Conexion {
     private static String USER = "orodriguez";
     private static String PASSWORD = "527267Gs";
    
-    
- 
-    public Conexion() {
-            }    
-    
+   
   
     public static Connection getConection(){
        try{
