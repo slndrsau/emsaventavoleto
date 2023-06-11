@@ -81,9 +81,7 @@ public class DUser {
                  usuario.setEmail(resultado.getString("correo"));
                  usuario.setPassword(resultado.getString("clave"));
                  usuario.setActive(resultado.getBoolean("activo"));
-                 usuario.setCreatedAt(resultado.getString("fecharegistro"));
                  usuario.setIdRol(resultado.getInt("idrol"));
-                 usuario.setNumber(resultado.getString("numero"));
                  model = usuario;
              }
              

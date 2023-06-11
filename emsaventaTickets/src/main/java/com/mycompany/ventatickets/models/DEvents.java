@@ -41,8 +41,8 @@ public class DEvents {
              StringBuilder query = new StringBuilder();
              query.append("select idevento, e.nombre, sinopsis, fechainicio, fechafin, ");
              query.append("foto, visible, fechavisible, fechaoculto, e.idresponsable, ");
-             query.append("vip, planta_a, planta_b, vip_mg, estado, r.nombre as responsable, tiporesponsable, duracion ");
-             query.append("from eventos as e inner join responsables as r on e.idevento = r.idresponsable");
+             query.append("vip, planta_a, planta_b, vip_mg, estado, r.nombre as responsable ");
+             query.append("from eventos as e inner join responsables as r on e.idresponsable = r.idresponsable");
              ResultSet resultado = sql.executeQuery(query.toString());
              
              while(resultado.next()){
@@ -64,9 +64,7 @@ public class DEvents {
                  Responsible responsible = new Responsible();
                  responsible.setId(resultado.getInt("idresponsable"));
                  responsible.setName(resultado.getString("responsable"));
-                 responsible.setType(resultado.getInt("tiporesponsable"));
                  events.setResponsible(responsible);
-                 events.setDuration(resultado.getString("duracion"));
                  listEvents.add(events);
              }
              
@@ -92,8 +90,8 @@ public class DEvents {
              StringBuilder query = new StringBuilder();
              query.append("select idevento, e.nombre, sinopsis, fechainicio, fechafin, ");
              query.append("foto, visible, fechavisible, fechaoculto, e.idresponsable, ");
-             query.append("vip, planta_a, planta_b, vip_mg, estado, r.nombre as responsable, tiporesponsable, duracion ");
-             query.append("from eventos as e inner join responsables as r on e.idevento = r.idresponsable ");
+             query.append("vip, planta_a, planta_b, vip_mg, estado, r.nombre as responsable ");
+             query.append("from eventos as e inner join responsables as r on e.idresponsable = r.idresponsable ");
              query.append(String.format("where idevento = %s", id));
              ResultSet resultado = sql.executeQuery(query.toString());
              
@@ -116,9 +114,7 @@ public class DEvents {
                  Responsible responsible = new Responsible();
                  responsible.setId(resultado.getInt("idresponsable"));
                  responsible.setName(resultado.getString("responsable"));
-                 responsible.setType(resultado.getInt("tiporesponsable"));
                  events.setResponsible(responsible);
-                 events.setDuration(resultado.getString("duracion"));
                  model = events;
              }
              

@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 
 public class Conexion {    
-    private static String URL = "jdbc:postgresql://emsarodriguez.postgres.database.azure.com";
+    private static String URL = "jdbc:postgresql://emsarodriguez.postgres.database.azure.com:5432/postgres";
     private static String USER = "orodriguez";
     private static String PASSWORD = "527267Gs";
    
