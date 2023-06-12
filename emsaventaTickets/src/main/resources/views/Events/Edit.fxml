@@ -71,7 +71,7 @@
                <children>
                   <ImageView fx:id="imageView" fitHeight="266.0" fitWidth="300.0" pickOnBounds="true" VBox.vgrow="ALWAYS">
                      <image>
-                        <Image url="@../../images/SIN_IMAGEN.jpg" />
+                        <Image url="@../../images/no-fotos.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="uploadImage" mnemonicParsing="false" style="-fx-background-color: #38D3D8;" styleClass="button-primary" text="Cargar Nueva Imagen">

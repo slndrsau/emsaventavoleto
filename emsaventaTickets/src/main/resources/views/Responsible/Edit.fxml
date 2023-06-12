@@ -19,7 +19,7 @@
             <Insets top="25.0" />
          </VBox.margin>
       </Label>
-      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+      <VBox prefHeight="275.0" prefWidth="465.0" VBox.vgrow="ALWAYS">
          <children>
             <Button fx:id="regresar" mnemonicParsing="false" prefHeight="30.0" prefWidth="134.0" style="-fx-background-color: #38D3D8;" styleClass="button-danger" text="Regresar" textFill="WHITE">
                <VBox.margin>
